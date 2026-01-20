@@ -9,7 +9,7 @@ class Ravi < Formula
   on_macos do
     on_arm do
       url "https://github.com/ravi-technologies/ravi-releases/releases/download/v#{version}/ravi-#{version}-macos-arm64.tar.gz"
-      sha256 "05de48aada9740e5099b02c4c77d7c16a8a63050fd316e16190bbad11c9c061a"
+      sha256 "61d624a7d2b76f2cf8b019f270b5c42d0be2a0d5c537604f6ce78b79cf522308"
     end
   end
 
