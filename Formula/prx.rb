@@ -35,8 +35,10 @@ class Prx < Formula
   end
 
   def install
-    # One-folder mode: entire prx folder is extracted, copy the binary
-    bin.install "prx"
+    # One-folder mode: PyInstaller creates a folder with the binary and _internal/ directory
+    # Install everything to libexec, then symlink the binary to bin
+    libexec.install "prx", "_internal"
+    bin.install_symlink libexec/"prx"
   end
 
   def caveats
