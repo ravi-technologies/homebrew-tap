@@ -19,12 +19,14 @@ class Ravi < Formula
 
   def caveats
     <<~EOS
-      Ravi requires an OpenAI API key to function.
-      Set your API key:
-        export OPENAI_API_KEY="your-api-key"
+      Ravi supports OpenAI and Anthropic. Set one of these API keys:
+        export OPENAI_API_KEY="your-key"      # For OpenAI
+        export ANTHROPIC_API_KEY="your-key"   # For Anthropic
+
       Get started:
         ravi review              # Review latest commit
         ravi review --staged     # Review staged changes
+        ravi review --provider anthropic  # Explicit provider
     EOS
   end
 
